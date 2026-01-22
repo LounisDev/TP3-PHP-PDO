@@ -18,7 +18,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestion des genres </a>
           <div class="dropdown-menu"> <!-- Ajouter des icones fontawesome Plus tard  -->
-            <a class="dropdown-item" href="#">Liste des Genres</a>
+            <a class="dropdown-item" href="liste_Genres.php">Liste des Genres</a>
             <a class="dropdown-item" href="#">Ajouter Un Genre</a>
             <a class="dropdown-item" href="#">Supprimer Un Genre</a>
         </li>
