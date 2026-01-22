@@ -11,6 +11,10 @@ $tableclass = 0;
     <h1>Liste des genres</h1>
 </div>
 
+<div class="container text-center mt-3 mb-3">
+    <a href="form_Genres.php" class="btn btn-primary btn-lg"> <i class="fa-solid fa-plus"></i> Ajouter un genre</a>
+</div>
+
 <table class="container table table-hover p-5 mt-5">
   <thead>
     <tr class="table-light text-center">
@@ -31,8 +35,8 @@ $tableclass = 0;
             echo '<td>'.$Genre->num.'</td>';
             echo '<td>'.$Genre->libelle.'</td>';
             echo '<td>
-                    <a href="" class="btn btn-info btn-sm">Modifier</a>
-                    <a href="" class="btn btn-danger btn-sm">Supprimer</a>
+                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a>
                   </td>';
             echo '</tr>';
         

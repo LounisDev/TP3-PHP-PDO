@@ -11,6 +11,10 @@ $tableclass = 0;
     <h1>Liste des nationalités</h1>
 </div>
 
+<div class="container text-center mt-3 mb-3">
+    <a href="form_Nationalite.php" class="btn btn-primary btn-lg"><i class="fa-solid fa-plus"></i> Ajouter une nationalité</a>
+</div>
+
 <table class="container table table-hover p-5 mt-5">
   <thead>
     <tr class="table-primary text-center">
