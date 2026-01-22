@@ -2,17 +2,18 @@
 include 'header.php';
 ?>
 <div class="container text-primary text-center bg-primary bg-opacity-10 mt-5 p-5 rounded-4">
-    <h1>Ajout d'une nationalité</h1>
+    <h1>Modification d'un genre</h1>
 </div>
 
-<form action="Ajout_Nationalites.php" method="post">
+<form action="Modif_Genres.php" method="post">
     <div class="mb-3 container mt-5 col-md-3">
-        <label for="libelle" class="form-label">Libellé de la nationalité</label>
+        <label for="libelle" class="form-label">Libellé du Genre</label>
         <input type="text" class="form-control" id="libelle" name="libelle" required>
     </div>
+    <input type="hidden" id="num" name="num"></input>
     <div class="container text-center mb-5">
-        <button type="submit" class="btn btn-success btn-lg"><i class="fa-solid fa-plus"></i>Ajouter la nationalité</button>
-        <button type="reset" class="btn btn-warning btn-lg"> <i class="fa-solid fa-circle-left"></i> Revenir sur la liste</button>
+        <button type="submit" class="btn btn-info btn-lg"><i class="fa-solid fa-plus"></i>Modifier le genre</button>
+        <a href="liste_Genres.php" class="btn btn-warning btn-lg"> <i class="fa-solid fa-circle-left"></i> Revenir sur la liste</a>
     </div>
 
 </form>
