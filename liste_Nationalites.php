@@ -36,7 +36,7 @@ $tableclass = 0;
             echo '<td>'.$Nationalite->libelle.'</td>';
             echo '<td>
                     <a href="formNationnalite.php?num='.$Nationalite->num.'&action=modifier" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="suppNationnalite.php?num='.$Nationalite->num.'" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="#modalSupp" data-bs-toggle="modal" data-message="Voulez-vous vraiment supprimer cette nationalité ?" data-supp=suppNationnalite.php?num='.$Nationalite->num.' class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a>
                   </td>';
             echo '</tr>';
         
@@ -51,6 +51,6 @@ $tableclass = 0;
   <tbody>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php
+include 'footer.php';  
+?>
