@@ -36,7 +36,7 @@ $tableclass = 0;
             echo '<td>'.$Genre->libelle.'</td>';
             echo '<td>
                     <a href="formGenres.php?num='.$Genre->num.'&action=modifier" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="suppGenres.php?num='.$Genre->num.'" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a>
                   </td>';
             echo '</tr>';
         

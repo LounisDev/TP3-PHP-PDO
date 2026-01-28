@@ -36,7 +36,7 @@ $tableclass = 0;
             echo '<td>'.$Nationalite->libelle.'</td>';
             echo '<td>
                     <a href="formNationnalite.php?num='.$Nationalite->num.'&action=modifier" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="suppNationnalite.php?num='.$Nationalite->num.'" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a>
                   </td>';
             echo '</tr>';
         
