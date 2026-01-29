@@ -1,10 +1,11 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css">
-    <script src="https://kit.fontawesome.com/b2036e060d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b2036e060d.js" crossorigin="anonymous"></script> 
     <title>Biliothéque</title>
 </head>
 <body>
@@ -21,21 +22,18 @@
           <div class="dropdown-menu"> <!-- Ajouter des icones fontawesome Plus tard  -->
             <a class="dropdown-item" href="liste_Genres.php">Liste des Genres</a>
             <a class="dropdown-item" href="formA_Genres.php">Ajouter Un Genre</a>
-            <a class="dropdown-item" href="#">Supprimer Un Genre</a>
         </li>
         <li class="nav-item dropdown"> <!-- Ajouter des icones fontawesome Plus tard  -->
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user"> </i>Gestion des auteurs </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Liste des Auteurs</a>
             <a class="dropdown-item" href="#">Ajouter Un Auteur</a>
-            <a class="dropdown-item" href="#">Supprimer Un Auteur</a>
         </li>
         <li class="nav-item dropdown"> <!-- Ajouter des icones fontawesome Plus tard  -->
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-flag"> </i>Gestion des nationalités </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="liste_Nationalites.php">Liste des nationnalité</a>
             <a class="dropdown-item" href="formA_Nationalite.php">Ajouter une nationnalité</a>
-            <a class="dropdown-item" href="#">Supprimer une nationnalité</a>
         </li>
       </ul>
     </div>

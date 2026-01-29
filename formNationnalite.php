@@ -10,6 +10,13 @@ if ($action == 'modifier') {
     $req->execute();
     $Nationalite=$req->fetch();
 }
+
+// liste Continents
+    $reqConti=$monPdo->prepare("SELECT * FROM continent");
+    $reqConti->setFetchMode(PDO::FETCH_OBJ);
+    $reqConti->execute();
+    $Continents=$reqConti->fetchAll();
+
 ?>
 <div class="container text-primary text-center bg-primary bg-opacity-10 mt-5 p-5 rounded-4">
     <?php if ($action == 'ajouter') 
@@ -23,6 +30,27 @@ if ($action == 'modifier') {
     <div class="mb-3 container mt-5 col-md-3">
         <label for="libelle" class="form-label">Libellé de la nationalité</label>
         <input type="text" class="form-control" id="libelle" name="libelle" value ="<?php if ($action == 'modifier') {echo $Nationalite->libelle;} ?>">
+    <hr>
+    <div>
+        <label for="continent" class="form-label">Libellé du continent</label>
+        <br>
+        <center>
+        <select name="continent" id="continent" class="form-select col-md-3">
+            <?php
+                foreach($Continents as $Continent){
+                    if ($Continent->num == $Nationalite->numContinent)
+                        {
+                            echo '<option value="'.$Continent->num.'" selected>'.$Continent->libelle.'</option>';
+                        }
+                    else
+                        {
+                            echo '<option value="'.$Continent->num.'">'.$Continent->libelle.'</option>';
+                        }
+                }
+            ?>
+        </select>
+        </center>
+    </div>
     </div>
     <input type="hidden" id="num" name="num" value ="<?php if ($action == 'modifier') {echo $Nationalite->num;} ?>"/>
     <div class="container text-center mb-5">

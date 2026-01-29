@@ -9,11 +9,12 @@ $req->execute();
 ;
 
 if($req){
-    echo "<div class='container alert alert-success text-center p-3 mt-3 col-md-3'> La nationalité a été supprimée</div>";
+    $_SESSION['message'] = ["success" => "La nationalité a été supprimée"];
 } else { 
-    echo "<div class='container alert alert-danger text-center p-3 mt-3 col-md-3'> La nationalité n'a pas été supprimée</div>";
+    $_SESSION['message'] = ["danger" => "La nationalité n'a pas été supprimée"];
 }
-echo '<a href="liste_Nationalites.php" class="btn btn-warning btn-lg"> <i class="fa-solid fa-circle-left"></i> Revenir sur la liste</a>';
+header('location: liste_Nationalites.php');
+exit();
 ?>
 
 

@@ -9,11 +9,13 @@ $req->execute();
 ;
 
 if($req){
-    echo "<div class='container alert alert-success text-center p-3 mt-3 col-md-3'> Le genre a été supprimée</div>";
+    $_SESSION['message'] = ["success" => "Le genre a été supprimé"];
 } else { 
-    echo "<div class='container alert alert-danger text-center p-3 mt-3 col-md-3'> Le genre n'a pas été supprimée</div>";
+    $_SESSION['message'] = ["danger" => "Le genre n'a pas été supprimé"];
 }
-echo '<a href="liste_Genres.php" class="btn btn-warning btn-lg"> <i class="fa-solid fa-circle-left"></i> Revenir sur la liste</a>';
+
+header('location: liste_Genres.php');
+exit();
 ?>
 
 

@@ -3,24 +3,28 @@ include 'header.php';
 include 'ConnectionBD.php';
 $action = $_GET['action'];
 $libelle = $_POST['libelle'];
+$continent = $_POST['continent'];
 if ($action == 'modifier') {
-    $num = $_POST['num'];
-    $req=$monPdo->prepare("update nationalite set libelle = :libelle where num= :num");
+    $num = $_POST['num'];   
+    $req=$monPdo->prepare("update nationalite set libelle = :libelle, numContinent = :continent where num= :num");
     $req->bindParam(':num', $num );
 }
 else if ($action == 'ajouter') {
-    $req=$monPdo->prepare("INSERT INTO nationalite(libelle) VALUES(:libelle)");
+    $req=$monPdo->prepare("INSERT INTO nationalite(libelle, numContinent) VALUES(:libelle, :continent)");
 }
 $req->bindParam(':libelle', $libelle );
+$req->bindParam(':continent', $continent );
 $req->execute();
 $message = $action == 'modifier' ? "modifiée" : "ajoutée";
 
 if($req){
-    echo "<div class='container alert alert-success text-center p-3 mt-3 col-md-3'> La nationalité a été ". $message . "</div>";
+    $_SESSION['message'] = ["success" => "La nationalité a été ". $message];
 } else { 
-    echo "<div class='container alert alert-danger text-center p-3 mt-3 col-md-3'> La nationalité n'a pas été ". $message . "</div>";
-}
-echo '<a href="liste_Nationalites.php" class="btn btn-warning btn-lg"> <i class="fa-solid fa-circle-left"></i> Revenir sur la liste</a>';
+    $_SESSION['message'] = ["danger" => "La nationalité n'a pas été ". $message];
+}                       
+
+header('location: liste_Nationalites.php');
+exit();
 ?>
 
 

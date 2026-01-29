@@ -11,6 +11,18 @@ $tableclass = 0;
     <h1>Liste des genres</h1>
 </div>
 
+<?php   
+if (!empty($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    foreach ($message as $cle => $message) {
+        echo '<div class="alert container alert-dismissible alert-'.$cle.' mt-4 text-center">'. $message .'
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>';
+    }
+    $_SESSION['message'] = [];
+}
+?>
+
 <div class="container text-center mt-3 mb-3">
     <a href="formGenres.php?action=ajouter" class="btn btn-primary btn-lg"> <i class="fa-solid fa-plus"></i> Ajouter un genre</a>
 </div>
