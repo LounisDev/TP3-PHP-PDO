@@ -52,7 +52,8 @@ if (!empty($_SESSION['message'])) {
 
 
 <div class="container text-center mt-3 mb-3">
-    <a href="formNationnalite.php?action=ajouter" class="btn btn-primary btn-lg"><i class="fa-solid fa-plus"></i> Ajouter une nationalité</a>
+    <a href="formNationnalite.php?action=ajouter" class="btn btn-primary btn-lg me-5"><i class="fa-solid fa-plus"></i> Ajouter une nationalité</a>
+    <a href="liste_Nationalites.php" class="btn btn-secondary btn-lg"><i class="fa-solid fa-arrows-rotate"></i> Actualiser la liste</a>
 </div>
 
 <div class="row mt-4">
