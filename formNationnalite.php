@@ -11,7 +11,7 @@ if ($action == 'modifier') {
     $Nationalite=$req->fetch();
 }
 
-// liste Continents
+// liste Continents avec select pour le formulaire
     $reqConti=$monPdo->prepare("SELECT * FROM continent");
     $reqConti->setFetchMode(PDO::FETCH_OBJ);
     $reqConti->execute();
