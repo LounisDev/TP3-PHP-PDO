@@ -21,7 +21,7 @@
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa-solid fa-book"></i>Gestion des genres </a>
           <div class="dropdown-menu"> <!-- Ajouter des icones fontawesome Plus tard  -->
             <a class="dropdown-item" href="liste_Genres.php">Liste des Genres</a>
-            <a class="dropdown-item" href="formA_Genres.php">Ajouter Un Genre</a>
+            <a class="dropdown-item" href="formGenres.php?action=ajouter">Ajouter Un Genre</a>
         </li>
         <li class="nav-item dropdown"> <!-- Ajouter des icones fontawesome Plus tard  -->
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user"> </i>Gestion des auteurs </a>
@@ -33,7 +33,7 @@
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-flag"> </i>Gestion des nationalités </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="liste_Nationalites.php">Liste des nationnalité</a>
-            <a class="dropdown-item" href="formA_Nationalite.php">Ajouter une nationnalité</a>
+            <a class="dropdown-item" href="formNationnalite.php?action=ajouter">Ajouter une nationnalité</a>
         </li>
       </ul>
     </div>
