@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <h1 class="text-white p-3">Biliothéque</h1>
+  <a href="index.php"> <h1 class="text-white p-3">Biliothéque</h1> </a>
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
